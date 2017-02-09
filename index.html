@@ -32,14 +32,13 @@
     <script src="js/jquery.js"></script>
     <script src="js/typed.js"></script>
 
- <script>
+<script>
     $(function(){
-        $(".element").typed({
-            strings: ["Think like a master.", "Play like a champion."],
-            typeSpeed: 0
+        $("#typed").typed({
+            stringsElement: $('#typed-strings')
         });
     });
- </script> 
+</script>
 
 </head>
 
@@ -105,7 +104,12 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Chess</h1>
-                       <p>	 <span class="element"> </span>
+                       <div id="typed-strings">
+                       <p>Think like a<strong>Master</strong></p>
+                         <p>Play<em>like a</em> Champion</p>
+                                               </div>
+                          <span id="typed"></span>
+			    <p>
                             <br>Created by fnplus.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
