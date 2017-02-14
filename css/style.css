@@ -8,3 +8,12 @@
 .intro-body{
 	background-color: rgba(0, 0, 0, 0.66);
 }
+.regis-btn{
+  margin-top: 9px;
+	background-color: #080808;
+	border-color: #1d9b6c;
+}
+.regis-btn:hover, .regis-btn:visited, .regis-btn:focus{
+  margin-top: 9px;
+	background-color: #080808;
+}
