@@ -93,11 +93,27 @@
       </div>
       <div class="modal-body">
         <form>
-          First name:<br>
-          <input type="text" name="firstname"><br>
-          Last name:<br>
-          <input type="text" name="lastname">
-        </form>
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="">Age:</label>
+            <input type="number" class="form-control" id="age">
+          </div>
+          <div class="form-group">
+            <label for="">Gaurdian's Name:</label>
+            <input type="text" class="form-control" id="guardian">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="address">Mobile Number:</label>
+            <input type="number" class="form-control" id="phone">
+          </div>
+       </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary regis-btn" data-dismiss="modal">Close</button>
