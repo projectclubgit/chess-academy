@@ -10,12 +10,19 @@
 }
 .regis-btn{
   margin-top: 9px;
-	background-color: #080808;
+	background-color: rgba(8, 8, 8, 0);
 	border-color: #1d9b6c;
 }
-.regis-btn:hover, .regis-btn:visited, .regis-btn:focus{
+.regis-btn:visited, .regis-btn:focus, .regis-btn:active{
   margin-top: 9px;
-	background-color: #080808;
+	background-color: rgba(8, 8, 8, 0);
+	border-color: #1d9b6c;
+}
+.regis-btn:hover{
+  margin-top: 9px;
+	background-color: rgba(8, 8, 8, 0);
+	border-color: #1d9b6c;
+	color: #1d9b6c;
 }
 .custom-modal{
 	background-color: rgba(0, 0, 0, 0.82);
