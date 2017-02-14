@@ -17,3 +17,12 @@
   margin-top: 9px;
 	background-color: #080808;
 }
+.custom-modal{
+	background-color: rgba(0, 0, 0, 0.82);
+}
+.modal-header{
+	border-color: rgba(0,0,0,0);
+}
+.modal-footer{
+	border-top: rgba(0,0,0,0);
+}
