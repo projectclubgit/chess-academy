@@ -7,11 +7,11 @@ $name=trim($_POST['name']);
 $age=trim($_POST['age']);
 $guardian=trim($_POST['gname']);
 $email=trim($_POST['email']);
-//$addr=trim($_POST['addr']);
+
 $phoneo=trim($_POST['phoneo']);
 $phoneh=trim($_POST['phoneh']);
 
-
+//Addr Removed
 
 
 //Checking If the email exits,Check me daddy!
@@ -20,7 +20,7 @@ $do=mysql_query("select * from chess where EMAIL='$email'");
 
 //The insertion Part
 if($count=='0'){
-        $do1=mysql_query("insert into chess (UID,NAME,AGE,GUARDIAN_NAME,EMAIL,ADDRESS,PHONE_O,PHONE_H) Values ('','$name','$age','$guardian','$email','addr','$phoneo','$phoneh
+        $do1=mysql_query("insert into chess (UID,NAME,AGE,GUARDIAN_NAME,EMAIL,PHONE_O,PHONE_H) Values ('','$name','$age','$guardian','$email','$phoneo','$phoneh
 ')"); //chess is a tablename in the Database 'dbtest'
 mail($email,Hi ,"Hello $name, You have been Sucessfully Registered");
 
