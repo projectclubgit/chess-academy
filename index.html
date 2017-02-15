@@ -92,36 +92,49 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="post">
           <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name">
+            <!-- <label for="name">Name:</label> -->
+            <input type="text" class="form-control" id="name" placeholder="Name">
           </div>
           <div class="form-group">
-            <label for="">Age:</label>
-            <input type="number" class="form-control" id="age">
+            <!-- <label for="">Age:</label> -->
+            <input type="number" class="form-control" id="age" placeholder="Age">
           </div>
           <div class="form-group">
-            <label for="">Gaurdian's Name:</label>
-            <input type="text" class="form-control" id="guardian">
+            <!-- <label for="">Gaurdian's Name:</label> -->
+            <input type="text" class="form-control" id="guardian" placeholder="Gaurdian's Name">
           </div>
           <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" id="email">
+            <!-- <label for="email">Email address:</label> -->
+            <input type="email" class="form-control" id="email" placeholder="Email address">
           </div>
           <div class="form-group">
-            <label for="address">Mobile Number:</label>
-            <input type="number" class="form-control" id="phone">
+            <!-- <label for="address">Phone Number:</label> -->
+            <input type="text" class="form-control" id="phone-number" placeholder="Phone Number">
           </div>
+					<div class="form-group">
+            <!-- <label for="address">Mobile Number:</label> -->
+            <input type="text" class="form-control" id="mobile-number" placeholder="Mobile Number">
+          </div>
+					<input type="submit" id="submit-form" hidden />
        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary regis-btn" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary regis-btn">Save changes</button>
-      </div>
+				<div class="modal-footer modal-buttons">
+					<center>
+					<button type="button" class="btn btn-primary regis-btn" onclick="submitForm()">Submit</button>
+	        <button type="button" class="btn btn-secondary regis-btn" data-dismiss="modal">Close</button>
+					</center>
+				</div>
     </div>
   </div>
   </div>
+
+	<script>
+		function submitForm(){
+			document.getElementById('submit-form').click();
+		}
+	</script>
 
     <!-- Intro Header -->
     <header class="intro">
