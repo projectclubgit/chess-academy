@@ -1,9 +1,9 @@
 # chess-academy
 
 ## Database Configuration 
-// Creating database
+### Creating database
 create database ashwa;
-// Creating table
+### Creating table
 CREATE TABLE `users` (
   UID int(20) AUTO_INCREMENT Primary key ,
   NAME varchar(65) NOT NULL ,
