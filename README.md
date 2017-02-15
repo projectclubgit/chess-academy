@@ -1,5 +1,20 @@
 # chess-academy
 
+## Database Configuration 
+// Creating database
+create database ashwa;
+// Creating table
+CREATE TABLE `users` (
+  UID int(20) AUTO_INCREMENT Primary key ,
+  NAME varchar(65) NOT NULL ,
+  AGE int(65) NOT NULL ,
+  GUARDIAN_NAME varchar(65) NOT NULL,  
+  EMAIL varchar(65) NOT NULL, 
+  ADDRESS varchar(65) NOT NULL,
+  PHONE_O int(65) NOT NULL,
+  PHONE_H int(65) NOT NULL
+);
+
 ## Creator
 
 Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
