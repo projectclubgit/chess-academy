@@ -80,3 +80,8 @@
 .modal-title{
 	font-size: 32px;
 }
+@media (min-width: 768px){
+	.intro .intro-body .brand-heading {
+	    font-size: 65px;
+	}
+}
