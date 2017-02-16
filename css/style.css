@@ -42,7 +42,6 @@
     text-shadow: 0 1px 0 #fff;
     filter: alpha(opacity=20);
 }
-
 #exTab1 .tab-content {
   color : white;
   background-color: #428bca;
@@ -71,4 +70,8 @@
   color : white;
   background-color: #428bca;
   padding : 5px 15px;
+}
+
+.high-text{
+	color: #1d9b6c;
 }
