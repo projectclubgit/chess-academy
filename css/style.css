@@ -42,10 +42,12 @@
     text-shadow: 0 1px 0 #fff;
     filter: alpha(opacity=20);
 }
+
+/* tabs in about section */
 #exTab1 .tab-content {
-  color : white;
-  background-color: #428bca;
-  padding : 5px 15px;
+    color: white;
+    background-color: #36393c;
+    padding: 5px 15px;
 }
 
 #exTab2 h3 {
@@ -71,7 +73,7 @@
   background-color: #428bca;
   padding : 5px 15px;
 }
-
-.high-text{
-	color: #1d9b6c;
+.nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #36393c;
 }
