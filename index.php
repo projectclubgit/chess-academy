@@ -1,3 +1,51 @@
+<?php
+include('dbconnect.php');
+
+if(isset($_POST['btn']))
+{
+$name=trim($_POST['name']);
+$age=trim($_POST['age']);
+$guardian=trim($_POST['gname']);
+$email=trim($_POST['email']);
+
+$phoneo=trim($_POST['phoneo']);
+$phoneh=trim($_POST['phoneh']);
+
+//Addr Removed
+
+
+//Checking If the email exits,Check me daddy!
+$do=mysql_query("select * from chess where EMAIL='$email'");
+    $count=mysql_num_rows($do);
+
+//The insertion Part
+if($count=='0'){
+        $do1=mysql_query("insert into chess (UID,NAME,AGE,GUARDIAN_NAME,EMAIL,PHONE_O,PHONE_H) Values ('','$name','$age','$guardian','$email','$phoneo','$phoneh
+')"); //chess is a tablename in the Database 'dbtest'
+mail($email,Hi ,"Hello $name, You have been Sucessfully Registered");
+
+$errmsg="Sucessfully Registered And Email Sent";
+    }
+else{
+
+  $errmsg="Sory Email Id exits";
+}
+
+    if ( !$do1 ) {
+$errmsg="Registration Failed,Try again";
+die("Connection failed : " . mysql_error());
+ }
+
+
+
+}
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,29 +143,29 @@
         <form method="post">
           <div class="form-group">
             <!-- <label for="name">Name:</label> -->
-            <input type="text" class="form-control" id="name" placeholder="Name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name">
           </div>
           <div class="form-group">
             <!-- <label for="">Age:</label> -->
-            <input type="number" class="form-control" id="age" placeholder="Age">
+            <input type="number" class="form-control" id="age" name="age" placeholder="Age">
           </div>
           <div class="form-group">
             <!-- <label for="">Gaurdian's Name:</label> -->
-            <input type="text" class="form-control" id="guardian" placeholder="Gaurdian's Name">
+            <input type="text" class="form-control" id="guardian" name="gname" placeholder="Gaurdian's Name">
           </div>
           <div class="form-group">
             <!-- <label for="email">Email address:</label> -->
-            <input type="email" class="form-control" id="email" placeholder="Email address">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email address">
           </div>
           <div class="form-group">
             <!-- <label for="address">Phone Number:</label> -->
-            <input type="text" class="form-control" id="phone-number" placeholder="Phone Number">
+            <input type="text" class="form-control" id="phone-number" name="phoneo" placeholder="Phone Number">
           </div>
 					<div class="form-group">
             <!-- <label for="address">Mobile Number:</label> -->
-            <input type="text" class="form-control" id="mobile-number" placeholder="Mobile Number">
+            <input type="text" class="form-control" id="mobile-number" name="phoneh" placeholder="Mobile Number">
           </div>
-					<input type="submit" id="submit-form" hidden />
+					<input type="submit" name="btn" id="submit-form" hidden />
        </form>
       </div>
 				<div class="modal-footer modal-buttons">
@@ -177,24 +225,39 @@
 					<li data-target="#myCarousel" data-slide-to="1"></li>
 					<li data-target="#myCarousel" data-slide-to="2"></li>
 					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+					<li data-target="#myCarousel" data-slide-to="5"></li>
+					<li data-target="#myCarousel" data-slide-to="6"></li>
 				</ol>
 
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active">
-						<img src="img/downloads-bg.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
+						<img src="img/001.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
 					</div>
 
 					<div class="item">
-						<img src="img/downloads-bg.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
+						<img src="img/002.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
 					</div>
 
 					<div class="item">
-						<img src="img/downloads-bg.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
+						<img src="img/003.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
 					</div>
 
 					<div class="item">
-						<img src="img/downloads-bg.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
+						<img src="img/004.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
+					</div>
+					
+					<div class="item">
+						<img src="img/005.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
+					</div>
+					
+					<div class="item">
+						<img src="img/006.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
+					</div>
+					
+					<div class="item">
+						<img src="img/007.jpg" no-repeat center center scroll alt="" width="100%" height="100%">
 					</div>
 				</div>
 
